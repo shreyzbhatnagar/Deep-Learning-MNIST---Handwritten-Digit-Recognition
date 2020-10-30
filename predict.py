@@ -18,8 +18,8 @@ def predict(img):
     image = image.reshape(1, 28, 28, 1)
     image /= 255
 
-    # plt.imshow(image.reshape(28, 28), cmap='Greys')
-    # plt.show()
+    plt.imshow(image.reshape(28, 28), cmap='Greys')
+    plt.show()
     model = load_model('cnn.hdf5')
     pred = model.predict(image.reshape(1, 28, 28, 1), batch_size=1)
 
@@ -27,4 +27,4 @@ def predict(img):
 
     # return pred.argmax()
 
-predict(cv2.imread('TestNumber.png'))
+predict(cv2.imread('Images\Threee.png'))
